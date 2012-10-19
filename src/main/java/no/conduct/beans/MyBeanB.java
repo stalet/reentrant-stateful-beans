@@ -39,7 +39,6 @@ public class MyBeanB implements Serializable {
         counter += 100;
     }
 
-    @TransactionAttribute(value = TransactionAttributeType.REQUIRES_NEW)
     public String getCounter()
     {
         return "bean B " + counter++ + " " + beanC.getCounter();
