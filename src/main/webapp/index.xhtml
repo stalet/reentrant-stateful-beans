@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:c="http://java.sun.com/jsp/jstl/core"
+                xmlns:rich="http://richfaces.org/rich"
+                template="/WEB-INF/templates/template.xhtml">
+
+    <ui:define name="title">Home</ui:define>
+
+    <ui:define name="content">
+
+        Bean A
+        <h:outputText value="#{beanA.counter}"/>
+        <p/>
+        Bean B
+        <h:outputText value="#{beanB.counter}"/>
+        <p/>
+        Bean C
+        <h:outputText value="#{beanC.counter}"/>
+        <p/>
+
+
+    </ui:define>
+
+</ui:composition>
+

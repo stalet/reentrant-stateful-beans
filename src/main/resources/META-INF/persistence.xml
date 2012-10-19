@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
+      http://java.sun.com/xml/ns/persistence
+      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+  <persistence-unit name="hmskontoret">
+
+    <jta-data-source>java:/hmskontoretDS</jta-data-source>
+
+    <shared-cache-mode>ALL</shared-cache-mode>
+
+    <properties>
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+      <property name="hibernate.connection.release_mode" value="after_statement"/>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.format_sql" value="false"/>
+      <property name="hibernate.jdbc.batch_versioned_data" value="true"/>
+
+      <!-- CACHE SETTINGS  -->
+      <property name="hibernate.cache.use_query_cache" value="true"/>
+      <property name="hibernate.cache.use_second_level_cache" value="true"/>
+      <property name="hibernate.cache.use_minimal_puts" value="true"/>
+
+      <!-- Alternative verdier: validate | update | create | create-drop. NB: Skal være kommentert ut i prod! -->
+      <!-- property name="hibernate.hbm2ddl.auto" value="validate"/ -->
+    </properties>
+  </persistence-unit>
+</persistence>
